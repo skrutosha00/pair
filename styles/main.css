@@ -1,0 +1,42 @@
+.link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  max-width: 40%;
+  max-height: 30%;
+}
+
+.play {
+  top: 25%;
+}
+
+.shop {
+  top: 60%;
+}
+
+.balance_field {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balance {
+  position: absolute;
+  top: 20%;
+  left: 61%;
+  transform: translateX(-50%);
+
+  font-size: 28px;
+}
+
+@media screen and (min-height: 768px) {
+  .balance_field img {
+    width: 250px;
+  }
+
+  .balance {
+    font-size: 36px;
+  }
+}

@@ -1,0 +1,99 @@
+.home {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+
+  height: 64px;
+}
+
+.home img {
+  max-height: 100%;
+}
+
+.balance_field {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balance {
+  position: absolute;
+  top: 20%;
+  left: 61%;
+  transform: translateX(-50%);
+
+  font-size: 28px;
+
+  transition: color 0.5s ease;
+}
+
+.balance.red {
+  color: crimson;
+}
+
+.shop {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 80%;
+  height: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  max-width: 25%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pic {
+  max-width: 100%;
+  max-height: 50%;
+}
+
+.price_cont {
+  height: 3vw;
+  font-size: 3vw;
+  color: #fff59e;
+
+  display: flex;
+  align-items: center;
+}
+
+.price_cont img {
+  height: 100%;
+}
+
+.button {
+  width: 100%;
+}
+
+@media screen and (min-height: 768px) {
+  .balance_field img {
+    width: 250px;
+  }
+
+  .balance {
+    font-size: 36px;
+  }
+
+  .shop {
+    height: 60%;
+  }
+}
+
+@media screen and (min-height: 1024px) {
+  .shop {
+    height: 50%;
+  }
+}
