@@ -153,6 +153,12 @@
   background: radial-gradient(50% 50% at 50% 50%, #ff3d00 0%, #ac2a01 100%);
   border: 1px solid #ff3b3b;
   border-radius: 6px;
+
+  transition: transform 0.5s ease;
+}
+
+.closed.flip {
+  transform: rotateY(180deg);
 }
 
 .side {
@@ -273,4 +279,3 @@
     font-size: 4vw;
   }
 }
-

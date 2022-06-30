@@ -80,6 +80,10 @@ document.querySelector('.spin').onclick = () => {
         pic.classList.remove('hidden')
     }
 
+    for (let closedCard of document.querySelectorAll('.closed')) {
+        closedCard.classList.add('flip')
+    }
+
     setTimeout(() => {
         gameOver()
     }, 1000);
@@ -95,6 +99,10 @@ document.querySelector('.again').onclick = () => {
 
     for (let pic of document.querySelectorAll('.closed img')) {
         pic.classList.add('hidden')
+    }
+
+    for (let closedCard of document.querySelectorAll('.closed')) {
+        closedCard.classList.remove('flip')
     }
 
     setSlots()
@@ -137,14 +145,14 @@ function getFinalCf() {
         }
     }
 
-    return match * 0.5
+    return match * 0.75
 }
 
 function gameOver() {
-    let reward = Number(betAmount.innerHTML) * getFinalCf()
+    let reward = Math.round(Number(betAmount.innerHTML) * getFinalCf())
 
-    warning.querySelector('.reward').innerHTML = reward
-    warning.querySelector('.outcome').innerHTML = reward ? 'You win' : 'You lose'
+    warning.querySelector('.reward').innerHTML = Math.round(reward - Number(betAmount.innerHTML))
+    warning.querySelector('.outcome').innerHTML = Math.round(reward - Number(betAmount.innerHTML) > 0) ? 'You win' : 'You lose'
     warning.style.left = '50%'
 
     changeBalance(reward)
